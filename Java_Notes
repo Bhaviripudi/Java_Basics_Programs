@@ -1,0 +1,160 @@
+Types of Inheritance :
+------------------------
+-> Single inheritance
+-> Multi level inheritance
+-> Multiple inheritance(Cannot achieve using class)
+-> Hirarchial
+-> Hybrid
+
+final keyword -> variable, method, class
+                  basically introduced for seurity purpose
+final a = 10; //value of variable is constant(cannot change)
+final void m1(){ // method cannot be overriden to child classes
+}
+final class Test{ //class cannot be extended
+}
+
+Interface
+----------
+It is a blueprint of class.
+Interface contains final & static variables and abstract methods.
+Interface only contains static and final variables   (by default).
+Multiple inheritance(1 child 2 parents) can be possible with interface.
+By default methods are public and abstract.
+
+Abstract : method only have defenition but not implementation.
+
+interface Test{
+void m1(){} //abstract method
+}
+class TestGpt implements Test{
+void m1(){Body---}
+}
+
+We cannot instantiate interface.
+Test tst = new Test();//not valid
+Test tst = new TestGpt();//valid
+
+Packages
+----------
+Collection of classes.
+There are 2 types :
+1. User-defined
+2. Pre-defined(built-in)--> import statements will be used for built-in packages
+
+Access Modifiers
+-----------------
+private --> Only access within the class
+default --> Accessible only within the package(outside of the package not accessible)
+protected --> Accessible with in the package and also outside of the package through inheritance.
+public --> Accessible everywhere without inheritance(within the class, within the package, outside of package).
+
+Exception Handling
+-------------------
+Exception is an event which will terminate the program unexpectedly.
+2 types :
+1. Checked Exceptions 
+   ------------------
+-> exceptions which are identified by the java compiler
+Examples : IOException, FileNotFoundException,, InterruptedException etc....
+
+2. Unchecked Exceptions 
+   --------------------
+-> exceptions which are not identified by the java compiler
+Examples : ArithematicException, NullPointerException, NumberFormatException, ArrayIndexOutOfBoundException
+
+Handle Exception
+-----------------
+try
+{
+// specify the statement which causes the exception
+}
+catch(Exception Type)
+{
+//write the code
+}
+
+Exception --> super class
+
+with finally(optional) :
+
+try
+{
+// specify the statement which causes the exception
+}
+catch(Exception Type)
+{
+//write the code
+}
+finally
+{
+//code
+}
+
+1) If exception occurs, catch block handles, finally block also executes.
+2) If exception occurs, catch block not handles, finally block handles.
+3) If exception not occurs, catch block will ignore, finally block executes.
+
+There are two methods to handle exceptions
+-------------------------------------------
+1. try catch block(handles checked and unchecked)
+2. throws keyword(only handles checked exceptions)
+
+ArrayList
+----------
+ArrayList a data structure in java
+It has no limit(we can store any no of elements)
+We can also store any kind of data type elements. 
+ 
+Limitations :
+1. Fixed size(array) -> to overcome arrayList came
+2. Can hold same type of data  -> to overcome, ObjArray is in use
+
+int a[] = new int[2]; // normal array declaration
+
+Notation 1 :
+------------
+ArrayList aL = new ArrayList(); //allows all the data type elements
+
+Notation 2 :
+------------
+ArrayList<String> aL = new ArrayList<>(); / /allows only string data elements
+ArrayList<Integer> aL = new ArrayList<>();/ /allows only integer data elements
+
+aL.add --> adding elements into array list
+aL.size --> no of elements
+aL.add(2,"value") --> insterting elements in the middle
+aL.remove(3) --> removing an element after 3 elements
+
+Hash Map
+-----------
+--> Hash map contains key and value
+--> Key and their value combinely called as  keypair.
+
+  key     value  --> key pair(entry set)
+---------------
+empName   Sulu
+empNo     90
+deptNo    3
+
+HashMap<keyType,valueType> hm = new HashMap<keyType,valueType>();
+
+hm.add(key,value) --> adding an element
+hm.remove(key)    --> removing an element
+for(Map.Entry(assigned individual pair to    m) m :hm.entrySet(total key and value set))
+{
+m.getKey
+m.getValue
+}
+
+
+
+
+
+
+
+
+
+
+
+
