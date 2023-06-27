@@ -1,0 +1,112 @@
+Class - is collection of variables and methods
+Object - is an instance of a class
+Method - is piece of code which will perform certain task
+         all methods should be part of a class
+         
+ create an object 
+ ----------------
+ Employee emp = new Employee();
+ 
+ Here,
+ Employee - class
+ emp - reference variable of object
+ Employee() - Instantiation
+ 
+ How many ways we can initialize the values to variables
+ ---------------------------------------------------------
+ Using object(directly)
+ Using constructor - is a kind of method, the constructor should be same name as class
+ using method
+ 
+ Methods
+ -------
+ A method takes parameters
+ A method may not take parameters
+ A method returns something
+ A method may not return anything
+ 
+ Overloading
+ -----------
+ Method overloading -> If a class contains more than one method with the same name is called as...
+ Constructor overloading -> If a class contains  more than one constructor.
+ 
+ If we apply overloading concept, we should follow some rules :
+ 1) Number of parameters
+ 2) Order of parameters
+ 3) DataTypes of parameters
+ 
+Constructor
+------------
+Is a special kind of method
+It wont return any value
+It should be same as class name
+It will be invoked at the time of object creation
+It will take the parameters(like method)
+It is only used for initialize values
+
+There are two types of constructors :
+1)Default constructor : It does not have any parameters
+2)Parameterized constructor : It has parameters 
+ 
+ Static keyword 
+ ---------------
+ Static variables and methods are shared across all the objects
+ Static variables and methods can directly access through class name
+ 
+ Static method -> can only access static stuff(directly), can not access non-static stuff directly but through objects.
+ Non-static methods -> can access both static and non-static stuff
+ 
+ System.out.println
+ ---------------------
+ class Test{
+ static String s = "sulu";
+ }
+ Test.s.length // 4 --- wants to access the static variable 's'.
+ 
+ System -> Pre-defined class
+ out -> static variable
+ println -> method of printStream data type.
+ 
+ public static void main(String args[])
+ ------------------------
+ JVM always looking for this main method to run programs
+ 
+ 
+ JDK - Java Development Kit(JRE and JVM) -> Used for developing java applications/softwares
+ JRE - Java Runtime Environment(JVM) -> It provided environment to run/install java based application/software
+ JVM - Java Virtual Machine -> Responsible for executing java programs
+ 
+ Inheritance
+ ------------
+ Acquiring methods and variables from parent class to child class
+ 
+ class A //parent class//super class//base class
+ {
+ ----
+ }
+ class B extends A //child class//sub class//derived class
+ {
+ ---
+ }
+ class C extends B
+ {
+ ----
+ }
+ 
+ Method overriding
+ -----------------
+ Re-define the same method from parent class to child class
+ class A{
+ void m1(int a, int b)//definition
+ {
+ --- //body
+ }
+ }
+ class B extends A{
+ void m2(int a, int y){}
+ 
+ Method overloading        vs    Method overriding
+ ------------------------------------------
+ No inheritance required           Atleast should have 2 classes(parent and child)
+ Definition should not be same      Definition should be same and body can be changed
+ 
