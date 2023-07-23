@@ -29,7 +29,7 @@ class Vehicle {
 
 	int a;
 
-	void run1() {
+	void run() {
 		System.out.println("vehicle");
 	}
 }
@@ -53,11 +53,11 @@ public class Overriding {
 		System.out.println(objhdfc.getRateOfInterest());
 
 		Vehicle vh = new Vehicle();
-		vh.run1();
+		//vh.run();
 
 		Bike bk = new Bike();
 		vh.a = 10;
-		bk.run1();
+		bk.run();
 
 	}
 
